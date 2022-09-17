@@ -29,12 +29,17 @@ function init() {
   for (let i = 0; i < buttons.length; i++) {
     const button = buttons[i];
     button.addEventListener("click", e => {
-      e.preventDefault;
+      e.preventDefault();
       let hour = button.parentElement.parentElement.children[0].dataset.time;
       let newValue = button.parentElement.parentElement.children[1].children[0].value;
       localStorage.setItem(hour, newValue);
     });
   }
+  document.getElementById("clear-all-timeblocks").addEventListener("click", e => {
+    e.preventDefault();
+    localStorage.clear();
+    location.reload();
+  });
 }
 
 init();
