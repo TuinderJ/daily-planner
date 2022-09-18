@@ -1,5 +1,5 @@
 function updateTimes() {
-  document.getElementById("currentDay").innerText = moment().format("dddd, MMMM do");
+  document.getElementById("currentDay").innerText = moment().format("dddd, MMMM Do");
   const table = document.getElementById("table-body");
 
   for (let i = 0; i < table.children.length; i++) {
